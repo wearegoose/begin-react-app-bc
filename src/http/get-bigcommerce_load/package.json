@@ -1,0 +1,7 @@
+{
+  "name": "begin-app-get-bigcommerce_load",
+  "dependencies": {
+    "@architect/functions": "latest",
+    "@begin/data": "latest"
+  }
+}
