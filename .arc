@@ -7,6 +7,7 @@ folder build
 @http
 get /api
 get /goose
+get /bigcommerce-auth
 
 @tables
 data
