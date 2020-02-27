@@ -1,8 +1,0 @@
-{
-  "name": "begin-app-get-bigcommerce_auth",
-  "dependencies": {
-    "@architect/data": "latest",
-    "@architect/functions": "latest",
-    "dotenv": "^8.2.0"
-  }
-}
