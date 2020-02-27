@@ -1,17 +1,7 @@
-require('dotenv').config();
-const arc = require('@architect/functions');
-const BigCommerce = require('node-bigcommerce');
-
-
-const bigCommerce = new BigCommerce({
-  logLevel: "debug",
-  clientId: process.env.BC_CLIENT_ID,
-  secret: process.env.BC_CLIENT_SECRET,
-  callback: process.env.BC_AUTH_CALLBACK,
-  responseType: "json",
-  apiVersion: "v3"
-});
-
+// Enable secure sessions, express-style middleware, and more:
+// https://docs.begin.com/en/functions/http/
+//
+// let begin = require('@architect/functions')
 
 let html = `
 <!doctype html>
@@ -37,26 +27,13 @@ let html = `
 `
 
 // HTTP function
-exports.handler = async function http(req, res) {
-
-  bigCommerce.authorize(req.query)
-  .then(data => res.render('integrations/auth', { title: 'Authorized!', data: data }))
-
-  try {
-    return {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'content-type': 'text/html; charset=utf8',
-        'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0',
-        'Location': process.env.APP_URL
-      },
-      body: html
-    }
-  } catch (err) {
-      console.log(`Error: ${JSON.stringify(err)}`)
-      return {
-          statusCode: 500,
-          body: "Error Installing App"
-      }
+exports.handler = async function http(req) {
+  console.log(req)
+  return {
+    headers: {
+      'content-type': 'text/html; charset=utf8',
+      'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
+    },
+    body: html
   }
 }
