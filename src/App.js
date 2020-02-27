@@ -4,26 +4,26 @@ import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
-  const [message, setMessage] = useState('...loading')
+  // const [message, setMessage] = useState('...loading')
 
-  useEffect(() => {
-    async function fetchData () {
-      try {
-        let data = await (await fetch('/bigcommerce-auth')).json()
-        setMessage(data.message)
-      } catch (err) {
-        setMessage(err.message)
-      }
-    }
-    fetchData()
-  })
+  // useEffect(() => {
+  //   async function fetchData () {
+  //     try {
+  //       let data = await (await fetch('/bigcommerce-auth')).json()
+  //       setMessage(data.message)
+  //     } catch (err) {
+  //       setMessage(err.message)
+  //     }
+  //   }
+  //   fetchData()
+  // })
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>{message}</p>
-        <p>Change me!</p>
+        <p></p>
+        <p>GOOSE</p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
