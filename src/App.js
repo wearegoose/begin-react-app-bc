@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     async function fetchData () {
       try {
-        let data = await (await fetch('/api')).json()
+        let data = await (await fetch('/bigcommerce-auth')).json()
         setMessage(data.message)
       } catch (err) {
         setMessage(err.message)

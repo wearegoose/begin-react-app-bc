@@ -1,0 +1,11 @@
+{
+  "name": "begin-app-shared",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@architect/functions": "^3.7.6",
+    "dotenv": "^8.2.0"
+  }
+}
