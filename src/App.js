@@ -1,23 +1,9 @@
 /* global fetch */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
-  // const [message, setMessage] = useState('...loading')
-
-  // useEffect(() => {
-  //   async function fetchData () {
-  //     try {
-  //       let data = await (await fetch('/bigcommerce-auth')).json()
-  //       setMessage(data.message)
-  //     } catch (err) {
-  //       setMessage(err.message)
-  //     }
-  //   }
-  //   fetchData()
-  // })
-
   return (
     <div className="App">
       <header className="App-header">
