@@ -9,6 +9,7 @@ get /api
 get /goose
 get /bigcommerce-load
 get /bigcommerce-uninstall
+get /bigcommerce_auth
 
 @tables
 data
